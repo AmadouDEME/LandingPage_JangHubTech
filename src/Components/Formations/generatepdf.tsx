@@ -1,5 +1,12 @@
 import { jsPDF } from "jspdf";
-import { Formation } from '../../Types/formation.types';
+export interface Formation {
+  title: string;
+  description: string;
+  duration: string;
+  level: string;
+  price: string;
+  points: string[];
+}
 
 export const generatePDF = (formation: Formation): void => {
   const doc = new jsPDF("p", "mm", "a4");
