@@ -1,6 +1,6 @@
 {
   "name": "landing-page",
-  "homepage": "https://https://amadoudeme.github.io/LandingPage_JangHubTech/",
+  "homepage": "https://AmadouDEME.github.io/LandingPage_JangHubTech",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
