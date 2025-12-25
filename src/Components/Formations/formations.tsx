@@ -15,7 +15,7 @@ interface Formation {
 const formations: Formation[] = [
   {
     title: "Développement Web Fullstack",
-    image: "/images/Formations/DevFull.png",
+    image: "images/Formations/DevFull.png",
     points: [
       "HTML, CSS, JavaScript avancés",
       "Frameworks React & Node.js",
@@ -30,7 +30,7 @@ const formations: Formation[] = [
   },
   {
     title: "Design Graphique & UI/UX",
-    image: "/images/Formations/Design.png",
+    image: "images/Formations/Design.png",
     points: [
       "Principes du design visuel",
       "Figma, Adobe XD & Photoshop",
@@ -45,7 +45,7 @@ const formations: Formation[] = [
   },
   {
     title: "Maîtrise de la Bureautique",
-    image: "/images/Formations/Bureautique.png",
+    image: "images/Formations/Bureautique.png",
     points: [
       "Microsoft Office 365 (Word, Excel, PowerPoint)",
       "Gestion de projet (Asana, Trello)",
@@ -60,7 +60,7 @@ const formations: Formation[] = [
   },
   {
     title: "Marketing Digital",
-    image: "/images/Formations/MarkDigital.png",
+    image: "images/Formations/MarkDigital.png",
     points: [
       "SEO (Search Engine Optimization)",
       "Publicité en ligne (Google Ads, Social Media)",
@@ -75,7 +75,7 @@ const formations: Formation[] = [
   },
   {
     title: "Intelligence Artificielle",
-    image: "/images/Formations/IA.png",
+    image: "images/Formations/IA.png",
     points: [
       "Apprentissage automatique (Machine Learning)",
       "Modèles prédictifs et génératifs",
@@ -90,7 +90,7 @@ const formations: Formation[] = [
   },
   {
     title: "Cloud Computing",
-    image: "/images/Formations/CloudComp.png",
+    image: "images/Formations/CloudComp.png",
     points: [
       "Fondamentaux AWS/GCP",
       "Déploiement d'applications cloud",

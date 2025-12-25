@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/images/icone.jpg"
+              src="images/icone.jpg"
               alt="Jang Hub Tech"
               className="w-10 h-10 object-contain"
             />

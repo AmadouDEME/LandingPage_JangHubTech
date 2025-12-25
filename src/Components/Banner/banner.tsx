@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const images = [
-  "/images/hero1.png",
-  "/images/hero2.png",
-  "/images/hero3.png",
-  "/images/hero4.png",
+  "images/hero1.png",
+  "images/hero2.png",
+  "images/hero3.png",
+  "images/hero4.png",
 ];
 
 const HeroBanner: React.FC = () => {

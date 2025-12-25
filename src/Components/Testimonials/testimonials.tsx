@@ -16,35 +16,35 @@ const testimonials: Testimonial[] = [
       "La formation de Jang Hub Tech a complètement transformé ma carrière. Des instructeurs passionnés et un programme très pratique !",
     name: "Sarah Dubois",
     role: "Développeuse Web Junior",
-    avatar: "/images/Testimonials/avatar2.png",
+    avatar: "images/Testimonials/avatar2.png",
   },
   {
     quote:
       "La section Design Graphique est très complète. Les projets m'ont permis de construire un portfolio solide.",
     name: "Marc Laurent",
     role: "Designer UI/UX",
-    avatar: "/images/Testimonials/avatar1.png",
+    avatar: "images/Testimonials/avatar1.png",
   },
   {
     quote:
       "Grâce au bootcamp Bureautique, j'ai optimisé ma productivité. Les formateurs sont très à l'écoute.",
     name: "Fatima Zahra",
     role: "Assistante Administrative",
-    avatar: "/images/Testimonials/avatar3.png",
+    avatar: "images/Testimonials/avatar3.png",
   },
   {
     quote:
       "Le programme Cloud Computing m'a permis de décrocher un poste de DevOps Engineer.",
     name: "Amadou Diallo",
     role: "DevOps Engineer",
-    avatar: "/images/Testimonials/avatar1.png",
+    avatar: "images/Testimonials/avatar1.png",
   },
   {
     quote:
       "Formation Marketing Digital exceptionnelle. Mon trafic web a triplé en 3 mois.",
     name: "Aissatou Seck",
     role: "Digital Marketing Manager",
-    avatar: "/images/Testimonials/avatar2.png",
+    avatar: "images/Testimonials/avatar2.png",
   },
 ];
 
