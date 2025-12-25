@@ -271,7 +271,7 @@ const FormationModal: React.FC<FormationModalProps> = ({
 
     // ---------------- Logo centré ----------------
     const logo = new Image();
-    logo.src = "/images/logo.jpg"; // chemin vers ton logo
+    logo.src = "images/logo.jpg";
     logo.onload = () => {
       const logoWidth = 100;
       const logoHeight = 60;
