@@ -19,7 +19,7 @@ const team = [
   {
     name: "Sokhna Faty D Faye",
     role: "Responsable Administration & RH",
-    image: "images/Teams/",
+    image: "images/Teams/RARH.png",
     linkedin: "#",
     email: "admin@janghubtech.com",
   },
