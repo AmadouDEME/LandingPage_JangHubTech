@@ -6,6 +6,7 @@ const menuItems = [
   { label: "Services", href: "#services" },
   { label: "Avantages", href: "#avantages" },
   { label: "Témoignages", href: "#temoignages" },
+  { label: "À Propos", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -16,19 +17,19 @@ const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div style={{ backgroundColor: "#FFFFFF" }}>
-        <div className="max-w-7xl flex items-center justify-between gap-3 px-10 py-4">
+        <div className="max-w-7xl flex items-center justify-between gap-3 px-4">
           
           {/* Logo */}
           <div className="flex items-center">
             <img
               src="images/icone.jpg"
               alt="Jang Hub Tech"
-              className="w-10 h-10 object-contain"
+              className="w-16 h-16 object-cover font-bold"
             />
           </div>
 
           {/* Menu desktop */}
-          <nav className="hidden md:flex items-center gap-8 font-medium text-[#0B0F19]">
+          <nav className="hidden md:flex items-center gap-10 mr-4 font-medium text-[#0B0F19]">
             {menuItems.map((item) => (
               <a
                 key={item.label}
@@ -47,7 +48,7 @@ const Navbar: React.FC = () => {
 
           {/* Hamburger (mobile) */}
           <button
-            className="md:hidden flex flex-col gap-1"
+            className="md:hidden flex flex-col gap-2"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >

@@ -5,8 +5,9 @@ import Services from './Components/Services/services';
 import WhyChoose from './Components/Features/WhyChoose';
 import Testimonials from './Components/Testimonials/testimonials';
 import StatsSection from "./Components/Testimonials/StatsSection";
-import NewsletterSection from './Components/Testimonials/NewsletterSection';
+import NewsletterSection from './Components/Contact/NewsletterSection';
 import Footer from './Components/Footer/footer';
+import AboutTeam from './Components/About/AboutTeam';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <WhyChoose />
       <Testimonials />
       <StatsSection />
+      <AboutTeam />
       <NewsletterSection />
       <Footer />
     </>

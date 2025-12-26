@@ -14,16 +14,16 @@ const testimonials: Testimonial[] = [
   {
     quote:
       "La formation de Jang Hub Tech a complètement transformé ma carrière. Des instructeurs passionnés et un programme très pratique !",
-    name: "Sarah Dubois",
-    role: "Développeuse Web Junior",
-    avatar: "images/Testimonials/avatar2.png",
+    name: "Serigne A Babou",
+    role: "Développeur Web Junior",
+    avatar: "images/Testimonials/avatar1.png",
   },
   {
     quote:
       "La section Design Graphique est très complète. Les projets m'ont permis de construire un portfolio solide.",
-    name: "Marc Laurent",
+    name: "Awa Ndiaye",
     role: "Designer UI/UX",
-    avatar: "images/Testimonials/avatar1.png",
+    avatar: "images/Testimonials/avatar2.png",
   },
   {
     quote:
@@ -62,13 +62,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div
-      className="
-        flex-shrink-0 w-full
-        md:w-[calc(50%-1rem)]
-        lg:w-[calc(33.333%-1rem)]
-        px-2 sm:px-4
-        transition-all duration-700
-      "
+      className="flex-shrink-0 w-full transition-all duration-700"
       style={{
         opacity: isVisible ? (isActive ? 1 : 0.6) : 0,
         transform: isVisible
@@ -79,7 +73,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       }}
     >
       <div
-        className="bg-white rounded-2xl p-5 sm:p-6 md:p-8 h-full flex flex-col transition-all"
+        className="bg-white rounded-2xl p-6 sm:p-8 h-full flex flex-col transition-all mx-2"
         style={{
           border: isActive ? "2px solid #00C48C" : "2px solid #E4E2DD",
           boxShadow: isActive
@@ -96,7 +90,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         </div>
 
         {/* Text */}
-        <p className="text-sm sm:text-base italic leading-relaxed opacity-75 mb-6">
+        <p className="text-base sm:text-lg italic leading-relaxed mb-6" style={{ color: "#0B0F19", opacity: 0.75 }}>
           {testimonial.quote}
         </p>
 
@@ -110,9 +104,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         />
 
         {/* Profile */}
-        <div className="flex items-center gap-3 sm:gap-4 mt-auto">
+        <div className="flex items-center gap-4 mt-auto">
           <div
-            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden"
+            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex-shrink-0"
             style={{
               border: isActive ? "3px solid #00C48C" : "3px solid #E4E2DD",
             }}
@@ -126,12 +120,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
           <div>
             <h4
-              className="font-bold text-sm sm:text-base"
+              className="font-bold text-base sm:text-lg"
               style={{ color: isActive ? "#00C48C" : "#0B0F19" }}
             >
               {testimonial.name}
             </h4>
-            <p className="text-xs sm:text-sm opacity-60">
+            <p className="text-sm sm:text-base" style={{ color: "#0B0F19", opacity: 0.6 }}>
               {testimonial.role}
             </p>
           </div>
@@ -144,7 +138,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 /* ================= MAIN ================= */
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3);
+  const [visibleCards, setVisibleCards] = useState(1);
   const [titleVisible, setTitleVisible] = useState(false);
   const [cardsVisible, setCardsVisible] = useState(false);
 
@@ -154,9 +148,13 @@ const Testimonials: React.FC = () => {
   /* Responsive cards count */
   useEffect(() => {
     const resize = () => {
-      if (window.innerWidth < 768) setVisibleCards(1);
-      else if (window.innerWidth < 1024) setVisibleCards(2);
-      else setVisibleCards(3);
+      if (window.innerWidth < 768) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(3);
+      }
     };
     resize();
     window.addEventListener("resize", resize);
@@ -193,10 +191,12 @@ const Testimonials: React.FC = () => {
     );
   };
 
+  const maxIndex = Math.max(0, testimonials.length - visibleCards);
+
   return (
     <section
       id="temoignages"
-      className="py-20 sm:py-24 overflow-hidden"
+      className="py-16 sm:py-24 overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #E8F5F1, #E1F4F8)",
       }}
@@ -205,14 +205,14 @@ const Testimonials: React.FC = () => {
         {/* Title */}
         <h2
           ref={titleRef}
-          className="text-3xl sm:text-4xl font-extrabold text-center mb-4 transition-all duration-1000"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-4 transition-all duration-1000 px-4"
           style={{
             opacity: titleVisible ? 1 : 0,
             transform: titleVisible ? "translateY(0)" : "translateY(-20px)",
             color: "#0B0F19",
           }}
         >
-          Ce que nos étudiants disent de nous
+          Ce que nos apprenants disent de nous
         </h2>
 
         {/* Line */}
@@ -226,60 +226,122 @@ const Testimonials: React.FC = () => {
           />
         </div>
 
-        {/* Slider */}
+        {/* Slider Container */}
         <div className="relative" ref={cardsRef}>
-          {/* Arrows (desktop only) */}
-          <button title="precedente"
+          {/* Desktop Arrows */}
+          <button
+            title="Précédente"
             onClick={prev}
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center hover:bg-[#00C48C] transition"
+            className="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center transition-all duration-300"
+            style={{ color: "#0B0F19" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#0099CC";
+              e.currentTarget.style.color = "#FFFFFF";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#FFFFFF";
+              e.currentTarget.style.color = "#0B0F19";
+            }}
           >
-            <ChevronLeft />
+            <ChevronLeft size={24} />
           </button>
 
-          <button title="suivante"
+          <button
+            title="Suivante"
             onClick={next}
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center hover:bg-[#00C48C] transition"
+            className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center transition-all duration-300"
+            style={{ color: "#0B0F19" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#0099CC";
+              e.currentTarget.style.color = "#FFFFFF";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#FFFFFF";
+              e.currentTarget.style.color = "#0B0F19";
+            }}
           >
-            <ChevronRight />
+            <ChevronRight size={24} />
           </button>
 
-          {/* Cards */}
-          <div className="mx-0 sm:mx-10 md:mx-16 overflow-hidden">
+          {/* Cards Container */}
+          <div className="lg:mx-16 overflow-hidden">
             <div
-              className="flex gap-4 sm:gap-6 transition-transform duration-700 ease-out"
+              className="flex transition-transform duration-700 ease-out"
               style={{
-                transform: `translateX(-${
-                  currentIndex * (100 / visibleCards)
-                }%)`,
+                transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
               }}
             >
               {testimonials.map((t, i) => (
-                <TestimonialCard
+                <div
                   key={i}
-                  testimonial={t}
-                  isActive={i >= currentIndex && i < currentIndex + visibleCards}
-                  isVisible={cardsVisible}
-                />
+                  className="flex-shrink-0"
+                  style={{
+                    width: `${100 / visibleCards}%`,
+                  }}
+                >
+                  <TestimonialCard
+                    testimonial={t}
+                    isActive={i >= currentIndex && i < currentIndex + visibleCards}
+                    isVisible={cardsVisible}
+                  />
+                </div>
               ))}
             </div>
           </div>
+
+          {/* Mobile Navigation Buttons */}
+          <div className="flex lg:hidden justify-center gap-4 mt-6">
+            <button
+              title="Précédente"
+              onClick={prev}
+              className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
+              style={{ color: "#0B0F19" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#00C48C";
+                e.currentTarget.style.color = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#FFFFFF";
+                e.currentTarget.style.color = "#0B0F19";
+              }}
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              title="Suivante"
+              onClick={next}
+              className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300"
+              style={{ color: "#0B0F19" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#00C48C";
+                e.currentTarget.style.color = "#FFFFFF";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#FFFFFF";
+                e.currentTarget.style.color = "#0B0F19";
+              }}
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
 
-        {/* Pagination */}
+        {/* Pagination Dots */}
         <div className="flex justify-center gap-2 mt-8 sm:mt-12">
           {Array.from({
             length: Math.ceil(testimonials.length / visibleCards),
           }).map((_, i) => (
-            <button title="suivante"
+            <button
+              title={`Page ${i + 1}`}
               key={i}
-              onClick={() => setCurrentIndex(i * visibleCards)}
-              className="rounded-full transition-all"
+              onClick={() => setCurrentIndex(Math.min(i * visibleCards, maxIndex))}
+              className="rounded-full transition-all duration-300"
               style={{
                 width:
                   Math.floor(currentIndex / visibleCards) === i
-                    ? "28px"
-                    : "10px",
-                height: "10px",
+                    ? "32px"
+                    : "12px",
+                height: "12px",
                 backgroundColor:
                   Math.floor(currentIndex / visibleCards) === i
                     ? "#0099CC"

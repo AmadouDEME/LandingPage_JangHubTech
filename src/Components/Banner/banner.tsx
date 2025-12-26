@@ -43,41 +43,11 @@ const HeroBanner: React.FC = () => {
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateX(0)" : "translateX(-50px)",
           }}>
-          <h1
-            className="text-4xl md:text-5xl font-extrabold leading-tight"
-            style={{ color: "#0B0F19" }}>
-            <span
-              className="inline-block transition-all duration-700"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: "200ms",
-                color: "#00C48C",
-              }}>
-              JANG
-            </span>{" "}
-            <span
-              className="inline-block transition-all duration-700"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: "400ms",
-                color: "#00C48C",
-              }}>
-              HUB
-            </span>
-            <br />
-            <span
-              className="inline-block transition-all duration-700"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                transitionDelay: "600ms",
-                color: "#0099CC",
-              }}>
-              TECH
-            </span>
-          </h1>
+          <img
+            src="images/logoremovebg.png"
+            alt="Jang Hub Tech"
+            className="w-150 h-50 object-cover"
+          />
           <p
             className="mt-6 max-w-lg transition-all duration-1000"
             style={{
