@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const team = [
   {
     name: "Amadou Deme",
-    role: "Fondateur",
+    role: "Fondateur & Mentor en Developpement Web",
     image: "images/Teams/Fundater.png",
     linkedin: "#",
     email: "fondateur@janghubtech.com",
@@ -18,28 +18,25 @@ const team = [
   },
   {
     name: "Sokhna Faty D Faye",
-    role: "Responsable Administration et RH",
-    image:
-      "images/Teams/",
+    role: "Responsable Administration & RH",
+    image: "images/Teams/",
     linkedin: "#",
     email: "admin@janghubtech.com",
   },
   {
     name: "Abdoulaye Ndiaye",
     role: "Ingénieur Système d'Information",
-    image:
-      "images/Teams/Ing_SysInf.jpeg",
+    image: "images/Teams/Ing_SysInf.jpeg",
     linkedin: "#",
     email: "ingenieur@janghubtech.com",
   },
   {
     name: "Abdou Khadre D Diouf",
     role: "Expert Biotech",
-    image:
-      "images/Teams/",
+    image: "images/Teams/",
     linkedin: "#",
     email: "biotech@janghubtech.com",
-  }
+  },
 ];
 
 const AboutTeam: React.FC = () => {
