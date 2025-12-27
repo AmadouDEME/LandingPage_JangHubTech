@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const team = [
   {
     name: "Amadou Deme",
-    role: "COE & Mentor en Développement d'application",
+    role: "COE/ Full Stack Developer & Mentor",
     image: "images/Teams/Fundater.png",
     linkedin: "#",
     email: "fondateur@janghubtech.com",
