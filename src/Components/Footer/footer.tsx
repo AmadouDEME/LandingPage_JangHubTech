@@ -27,6 +27,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Liens rapides</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <a href="#acceuil" className="hover:text-white/80 transition">
+                  Acceuil
+                </a>
+              </li>
+              <li>
                 <a href="#services" className="hover:text-white/80 transition">
                   Services
                 </a>
@@ -39,15 +44,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#avantages" className="hover:text-white/80 transition">
-                  Avantages
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#temoignages"
-                  className="hover:text-white/80 transition">
-                  Témoignages
+                <a href="#about" className="hover:text-white/80 transition">
+                  À Propos
                 </a>
               </li>
             </ul>

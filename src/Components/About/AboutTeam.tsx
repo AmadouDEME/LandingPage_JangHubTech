@@ -32,7 +32,7 @@ const team = [
   },
   {
     name: "Abdou Khadre D Diouf",
-    role: "Expert Biotech",
+    role: "Ingénieur en BioInformatique",
     image: "images/Teams/",
     linkedin: "#",
     email: "biotech@janghubtech.com",
