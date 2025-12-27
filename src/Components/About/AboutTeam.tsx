@@ -25,14 +25,14 @@ const team = [
   },
   {
     name: "Abdoulaye Ndiaye",
-    role: "Ingénieur Système d'Information/ Lead Developer & CTO ",
+    role: "IT Systems Engineer/ Lead Developer & CTO ",
     image: "images/Teams/Ing_SysInf.jpeg",
     linkedin: "#",
     email: "ingenieur@janghubtech.com",
   },
   {
     name: "Abdou Khadre D Diouf",
-    role: "Ingénieur en BioInformatique/ Responsable Pédagogique & Formation",
+    role: "BioInformatics Engineer/ Responsable Formation",
     image: "images/Teams/",
     linkedin: "#",
     email: "biotech@janghubtech.com",
