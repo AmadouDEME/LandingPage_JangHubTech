@@ -41,7 +41,7 @@ const team = [
     name: "Abdou Khadre D Diouf",
     role: "Bio-Informatics Engineer | Responsable Formation",
     image: "images/Teams/RF.jpeg",
-    linkedin: "#linkedin",
+    linkedin: "#",
     email: "biotech@janghubtech.com",
   },
 ];
@@ -151,7 +151,7 @@ const AboutTeam: React.FC = () => {
             </div>
 
             {/* Contenu principal */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-10">
+            <div className="grid md:grid-cols-3 gap-12 items-center mb-10">
               {/* Image/Illustration */}
               <div
                 className="relative rounded-2xl overflow-hidden"
