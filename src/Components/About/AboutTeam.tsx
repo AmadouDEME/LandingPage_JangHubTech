@@ -31,6 +31,13 @@ const team = [
     email: "ingenieur@janghubtech.com",
   },
   {
+    name: "Leila Rahim Diop",
+    role: "Chargée de la coordination pédagogique",
+    image: "images/Teams/LRD.jpeg",
+    linkedin: "#",
+    email: "ingenieur@janghubtech.com",
+  },
+  {
     name: "Abdou Khadre D Diouf",
     role: "Bio-Informatics Engineer | Responsable Formation",
     image: "images/Teams/",
