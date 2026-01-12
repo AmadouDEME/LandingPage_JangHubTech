@@ -151,7 +151,7 @@ const AboutTeam: React.FC = () => {
             </div>
 
             {/* Contenu principal */}
-            <div className="grid md:grid-cols-3 gap-12 items-center mb-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-10">
               {/* Image/Illustration */}
               <div
                 className="relative rounded-2xl overflow-hidden"
