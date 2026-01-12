@@ -32,7 +32,7 @@ const team = [
   },
   {
     name: "Leila Rahim Diop",
-    role: "Chargée de la coordination pédagogique",
+    role: "Coordinatrice pédagogique | Operations & Finance Officer",
     image: "images/Teams/LRD.jpeg",
     linkedin: "#",
     email: "ingenieur@janghubtech.com",
